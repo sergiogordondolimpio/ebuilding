@@ -1,0 +1,22 @@
+.carousel-container {
+    background-color: gray;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    transition: background-image 1s ease-in-out;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.spacer-margin {
+    flex: 0.05 1 auto;
+}
+
+.carousel-button {
+    margin: 0 20px;
+}

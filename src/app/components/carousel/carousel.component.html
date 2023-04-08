@@ -1,0 +1,11 @@
+<div class="carousel-container" setBackImage [imageUrl]="imageUrl">
+    <div class="spacer-margin"></div>
+    <button (click)="previousImage()" mat-mini-fab color="orange" aria-label="Example icon button with a menu icon">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <div class="spacer"></div>
+    <button (click)="nextImage()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+    <div class="spacer-margin"></div>
+</div>

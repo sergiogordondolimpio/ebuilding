@@ -11,11 +11,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { SetBackgroundImageDirective } from './directives/set-background-image.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CarouselComponent,
+    SetBackgroundImageDirective
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
