@@ -17,6 +17,25 @@
     flex: 0.05 1 auto;
 }
 
+.spacer-margin-bottom {
+    flex: 0.2 1 auto;
+}
+
 .carousel-button {
     margin: 0 20px;
 }
+
+.line {
+    height: 6px;
+    width: 16px;
+    background-color: #ffc107;
+}
+
+.carousel-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+

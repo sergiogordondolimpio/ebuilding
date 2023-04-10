@@ -5,13 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /////////// Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 /////////// Material
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { SetBackgroundImageDirective } from './directives/set-background-image.directive';
 
 @NgModule({

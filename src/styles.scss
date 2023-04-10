@@ -1,0 +1,44 @@
+@use '@angular/material' as mat;
+
+
+// Angular Material defines a mixin named core that includes prerequisite styles for common 
+// features used by multiple components, such as ripples. The core mixin must be included 
+// exactly once for your application, even if you define multiple themes. Including the core 
+// mixin multiple times will result in duplicate CSS in your application.
+@include mat.core();
+
+
+// The define-palette Sass function accepts a color palette, described in the Palettes section above, 
+// as well as four optional hue numbers. These four hues represent, in order: the "default" hue, a 
+// "lighter" hue, a "darker" hue, and a "text" hue. Components use these hues to choose the most 
+// appropriate color for different parts of themselves.
+// Palettes are in the file material/core/theming/_palette.scss
+$primary-fab-button: mat.define-palette(mat.$amber-palette, 500);
+$accent-fab-button: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The "warn" palette is optional and defaults to red if not specified.
+$warn-fab-button: mat.define-palette(mat.$red-palette);
+
+
+// You can construct a theme by calling either define-light-theme or define-dark-theme with 
+// the result from define-palette. 
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $primary-fab-button,
+   accent: $accent-fab-button,
+   warn: $warn-fab-button
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
+// Emit styles specific theme, in this case the fab-mini-button
+// The themes are in material/core/theming/_all-theme.scss, is
+// the name of the file
+@include mat.fab-theme($my-theme);
+@include mat.button-theme($my-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

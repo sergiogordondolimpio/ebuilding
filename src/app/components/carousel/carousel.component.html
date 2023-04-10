@@ -1,9 +1,19 @@
 <div class="carousel-container" setBackImage [imageUrl]="imageUrl">
     <div class="spacer-margin"></div>
-    <button (click)="previousImage()" mat-mini-fab color="orange" aria-label="Example icon button with a menu icon">
+    <button (click)="previousImage()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
         <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
-    <div class="spacer"></div>
+    <div class="spacer carousel-description">
+        <div class="spacer"></div>
+        <h1>E-Building</h1>
+        <p>All the material that you need in your construction in one place</p>
+        <button mat-raised-button color="primary">Primary</button>
+        <div class="spacer"></div>
+        <div class="carousel-lines">
+            <div class="line"></div>
+        </div>
+        <div class="spacer-margin-bottom"></div>
+    </div>
     <button (click)="nextImage()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
         <mat-icon>keyboard_arrow_right</mat-icon>
     </button>
