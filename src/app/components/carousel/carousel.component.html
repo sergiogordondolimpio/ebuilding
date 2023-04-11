@@ -1,21 +1,30 @@
 <div class="carousel-container" setBackImage [imageUrl]="imageUrl">
-    <div class="spacer-margin"></div>
+    <div class="flex-1-1-0"></div>
+    <!-- Left Button -->
     <button (click)="previousImage()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
         <mat-icon>keyboard_arrow_left</mat-icon>
     </button>
-    <div class="spacer carousel-description">
-        <div class="spacer"></div>
+    <!-- Descripton -->
+    <div class="flex-20-1-0 carousel-description">
+        <div class="flex-20-1-0"></div>
         <h1>E-Building</h1>
         <p>All the material that you need in your construction in one place</p>
+        <div class="flex-4-1-0"></div>
         <button mat-raised-button color="primary">Primary</button>
-        <div class="spacer"></div>
+        <div class="flex-20-1-0"></div>
         <div class="carousel-lines">
-            <div class="line"></div>
+            <button 
+                *ngFor="let button of images; index as i;" 
+                mat-raised-button [color]="(imageUrl === button)?'primary':'accent'" 
+                class="line" 
+                (click)="setImage(i)" >
+            </button>
         </div>
-        <div class="spacer-margin-bottom"></div>
+        <div class="flex-4-1-0"></div>
     </div>
+    <!-- Right button -->
     <button (click)="nextImage()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
         <mat-icon>keyboard_arrow_right</mat-icon>
     </button>
-    <div class="spacer-margin"></div>
+    <div class="flex-1-1-0"></div>
 </div>

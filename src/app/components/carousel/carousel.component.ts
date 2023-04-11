@@ -22,5 +22,8 @@ export class CarouselComponent {
     this.imageUrl = this.images[this.count]
   }
 
-
+  setImage(index: number): void {
+    this.count = index;
+    this.imageUrl = this.images[this.count];
+  }
 }

@@ -9,26 +9,17 @@
     transition: background-image 1s ease-in-out;
 }
 
-.spacer {
-    flex: 1 1 auto;
-}
+.carousel-lines {
+    
+    .line {
+        height: 6px;
+        min-width: 26px;
+        padding: 0;
+    }
 
-.spacer-margin {
-    flex: 0.05 1 auto;
-}
-
-.spacer-margin-bottom {
-    flex: 0.2 1 auto;
-}
-
-.carousel-button {
-    margin: 0 20px;
-}
-
-.line {
-    height: 6px;
-    width: 16px;
-    background-color: #ffc107;
+    button:not(:first-child) {
+        margin-left: 5px;
+    }
 }
 
 .carousel-description {
@@ -37,5 +28,21 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    h1 {
+        font-weight: bold;
+        font-size: 40px;
+        text-shadow: 2px 2px 8px #000000;
+        color: white;
+    }
+
+    p {
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        text-shadow: 2px 2px 8px #000000;
+        color: white;
+    }
+
 }
 
