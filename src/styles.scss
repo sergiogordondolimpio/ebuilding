@@ -67,3 +67,26 @@ $flex_basis: (
   }
 }
 
+// Margin
+// this format:
+// .m-top-right-bottom-left
+// example: m-0-2-0-2  (only 2 in both sides)
+@for $t from 0 to 11 {
+  @for $r from 0 to 11 {
+    @for $b from 0 to 11 {
+      @for $l from 0 to 11 {
+        .m-#{$t}-#{$r}-#{$b}-#{$l} {
+          margin: $t * 5px $r * 5px $b * 5px $l * 5px;
+        }
+      }
+    } 
+  }
+}
+
+// Font
+// Font size: the size is 5 to 5 until 50px
+@for $s from 0 to 11 {
+  .f-s-#{$s} {
+    font-size: $s * 5px;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="card-line-container">
+    <div *ngFor="let item of cards" class="item">
+        <mat-icon class="f-s-8" size height="30%" width="30%">{{item.icon}}</mat-icon>
+        <div class="description">
+            <h2>{{item.title.toUpperCase()}}</h2>
+            <div class="separator m-2-0-3-0"></div>
+            <p>{{item.description}}</p>
+        </div>
+    </div>
+</div>

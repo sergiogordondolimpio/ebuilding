@@ -6,20 +6,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /////////// Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { CardsLineComponent } from './components/cards-line/cards-line.component';
 
 /////////// Material
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+////////// Directives
 import { SetBackgroundImageDirective } from './directives/set-background-image.directive';
+import { SizeDirective } from './directives/size.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     CarouselComponent,
-    SetBackgroundImageDirective
+    SetBackgroundImageDirective,
+    CardsLineComponent,
+    SizeDirective
   ],
   imports: [
     BrowserModule,
