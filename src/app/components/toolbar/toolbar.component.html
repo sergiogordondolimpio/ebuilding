@@ -5,7 +5,12 @@
     <img class="toolbar-image" [src]="config.image">
     <span>{{config.span}}</span>
     <div class="spacer"></div>
-    <button mat-button *ngFor="let button of config.buttons">{{button}}</button>
+    <button 
+        mat-button 
+        *ngFor="let button of config.buttons"
+        (click)="sendButton(button)"
+        >{{button}}
+    </button>
     <div class="spacer"></div>
     <button mat-icon-button *ngFor="let icon of config.icons">
         <mat-icon>{{icon}}</mat-icon>

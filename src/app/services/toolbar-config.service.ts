@@ -55,4 +55,8 @@ export class ToolbarConfigService {
     getConfig(): ToolBarConfig {
         return this.config;
     }
+
+    clickButton(button: string): void {
+
+    }
 }
