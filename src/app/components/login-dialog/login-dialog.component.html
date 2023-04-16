@@ -1,5 +1,13 @@
-<h1 mat-dialog-title>Dialog with elements</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
-</div>
+<h1 mat-dialog-title>Login</h1>
+<mat-divider></mat-divider>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-container m-4-0-4-0">
+  <mat-form-field appearance="fill" *ngFor="let element of formElements">
+    <mat-label>{{element.label}}</mat-label>
+    <input matInput [placeholder]="element.placeholder" [formControlName]="element.key" required>
+    <mat-error *ngIf="isValid(element.key)">{{getErrorMessage(element.key)}}</mat-error>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close type="submit" color="primary" [disabled]="isFormNotValid()">Log in</button>
+    <button mat-raised-button mat-dialog-close color="primary">Close</button>
+  </div>
+</form>

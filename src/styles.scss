@@ -39,6 +39,10 @@ $my-theme: mat.define-light-theme((
 // the name of the file
 @include mat.fab-theme($my-theme);
 @include mat.button-theme($my-theme);
+@include mat.divider-theme($my-theme);
+@include mat.dialog-theme($my-theme);
+@include mat.input-theme($my-theme);
+@include mat.form-field-theme($my-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

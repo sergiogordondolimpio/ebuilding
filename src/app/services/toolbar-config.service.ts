@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ToolBarConfig } from '../interfaces/toolbar-config';
 import { TOOLBAR_CONFIG_BUTTONS, TOOLBAR_CONFIG_ICONS, TOOLBAR_CONFIG_IMAGE, TOOLBAR_CONFIG_SPAN } from '../data/toolbar-config';
+import { LoginDialogComponent } from '../components/login-dialog/login-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +15,9 @@ import { TOOLBAR_CONFIG_BUTTONS, TOOLBAR_CONFIG_ICONS, TOOLBAR_CONFIG_IMAGE, TOO
 */
 export class ToolbarConfigService {
 
-  config: ToolBarConfig;
+    config: ToolBarConfig;
 
-    constructor() {
+    constructor(public dialog: MatDialog) {
         this.config =  this.setConfig();
     }
 
@@ -56,7 +58,19 @@ export class ToolbarConfigService {
         return this.config;
     }
 
+    /* 
+        Function to add the functionality of buttons
+    */
     clickButton(button: string): void {
-
+        switch (button.toLowerCase()) {
+            case 'login':
+                this.dialog.open(LoginDialogComponent, {
+                    width: '40%',
+                })
+                break;
+        
+            default:
+                break;
+        }
     }
 }
