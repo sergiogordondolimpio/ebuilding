@@ -23,6 +23,8 @@ import {MatInputModule} from '@angular/material/input';
 ////////// Directives
 import { SetBackgroundImageDirective } from './directives/set-background-image.directive';
 import { SizeDirective } from './directives/size.directive';
+import { GetErrorMessagePipe } from './pipes/get-error-message.pipe';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SizeDirective } from './directives/size.directive';
     SetBackgroundImageDirective,
     CardsLineComponent,
     SizeDirective,
-    LoginDialogComponent
+    LoginDialogComponent,
+    GetErrorMessagePipe,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

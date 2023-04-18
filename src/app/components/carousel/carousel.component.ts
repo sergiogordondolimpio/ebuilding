@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { interval } from 'rxjs';
 import { CAROUSEL_CONFIG_IMAGES } from 'src/app/data/carousel-config';
 
 @Component({
@@ -11,6 +12,22 @@ export class CarouselComponent {
   imageUrl: string = CAROUSEL_CONFIG_IMAGES[0];
   images: string[] = CAROUSEL_CONFIG_IMAGES;
   count: number = 0;
+  @Input() setTimer: boolean = false;
+  @Input() segTimer: number = 6000;
+
+  constructor(){
+    this.timerImage();
+  }
+  
+  timerImage(): void {
+    if (this.setTimer) {
+      interval(this.segTimer)
+        .subscribe(() => {
+          this.nextImage()
+        }
+      )
+    }
+  }
 
   nextImage(): void {
     (this.count === this.images.length-1)? this.count=0 : this.count++;

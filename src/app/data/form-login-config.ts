@@ -7,6 +7,7 @@ export const FORM_CONFIG: FormConfig[] = [
       value: '',
       label: 'Enter your email',
       placeholder: 'pat@example.com',
+      message: '',
       validators: [Validators.required, Validators.email]
     },
     {
@@ -14,6 +15,7 @@ export const FORM_CONFIG: FormConfig[] = [
       value: '',
       label: 'Enter your password',
       placeholder: '',
+      message: '',
       validators: [Validators.required]
     }
   ]

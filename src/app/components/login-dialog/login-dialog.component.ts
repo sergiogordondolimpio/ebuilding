@@ -22,11 +22,7 @@ export class LoginDialogComponent {
   isValid(key: string): boolean { 
     return this.formService.isValid(key, this.loginForm); 
   }
-
-  getErrorMessage(key: string): string {
-    return this.formService.getErrorMessage(key, this.loginForm); 
-  }
-
+  
   isFormNotValid(): boolean {
     return this.formService.isFormNotValid(this.loginForm); 
   }

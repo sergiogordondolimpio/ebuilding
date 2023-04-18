@@ -4,7 +4,7 @@
   <mat-form-field appearance="fill" *ngFor="let element of formElements">
     <mat-label>{{element.label}}</mat-label>
     <input matInput [placeholder]="element.placeholder" [formControlName]="element.key" required>
-    <mat-error *ngIf="isValid(element.key)">{{getErrorMessage(element.key)}}</mat-error>
+    <mat-error *ngIf="isValid(element.key)">{{ element.message | getErrorMessage: element.key: loginForm}}</mat-error>
   </mat-form-field>
   <div mat-dialog-actions>
     <button mat-raised-button mat-dialog-close type="submit" color="primary" [disabled]="isFormNotValid()">Log in</button>

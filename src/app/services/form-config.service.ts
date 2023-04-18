@@ -32,6 +32,7 @@ export class FormConfigService {
     With Object.keys()[0] get the first object.
     Validators.someValidator.name get the name of the validator.
     The switch compare the fist key with the name of the validator.
+    // it can be used with the pipe GetErrorMessagePipe
   */
   getErrorMessage(key: string, form: FormGroup): string {
     /* console.log(key, ': ', this.loginForm.get(key)?.errors)

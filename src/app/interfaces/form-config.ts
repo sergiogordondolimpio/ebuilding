@@ -5,5 +5,6 @@ export interface FormConfig {
     value: string,
     label: string,
     placeholder: string,
+    message: string,
     validators: ValidatorFn[]
 }
