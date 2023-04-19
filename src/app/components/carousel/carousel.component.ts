@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { CAROUSEL_CONFIG_IMAGES } from 'src/app/data/carousel-config';
 
@@ -7,7 +7,7 @@ import { CAROUSEL_CONFIG_IMAGES } from 'src/app/data/carousel-config';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit{
 
   imageUrl: string = CAROUSEL_CONFIG_IMAGES[0];
   images: string[] = CAROUSEL_CONFIG_IMAGES;
@@ -16,6 +16,9 @@ export class CarouselComponent {
   @Input() segTimer: number = 6000;
 
   constructor(){
+  }
+  
+  ngOnInit(): void {
     this.timerImage();
   }
   

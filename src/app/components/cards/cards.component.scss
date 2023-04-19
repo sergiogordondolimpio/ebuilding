@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+    .card {
+        width: 300px;
+        background-color: aliceblue;
+        @include mat.elevation(6, rgb(65, 65, 65), 0.6);
+    }
+
+    .icon {
+        position: absolute;
+        left: calc(50% - 24px);
+        top: 60%;
+        z-index: 1;
+        border-radius: 50%;
+        background-color: #ffc107;
+        padding: 12px;
+    }
+}
