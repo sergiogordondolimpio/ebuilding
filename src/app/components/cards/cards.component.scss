@@ -2,23 +2,49 @@
 
 .container-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 500px;
 
     .card {
-        width: 300px;
-        background-color: aliceblue;
+        width: 250px;
+        background-color: white;
         @include mat.elevation(6, rgb(65, 65, 65), 0.6);
+
+        img {
+            width: 250px; 
+            height: 200px; 
+            object-fit: cover;
+            object-position: 25% 25%; 
+        }
     }
 
     .icon {
         position: absolute;
         left: calc(50% - 24px);
-        top: 60%;
+        top: calc(50% - 26px);
         z-index: 1;
         border-radius: 50%;
         background-color: #ffc107;
         padding: 12px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: small;
+            text-align: center;
+            height: 60px;
+        }
     }
 }
