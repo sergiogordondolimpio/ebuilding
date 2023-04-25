@@ -28,6 +28,8 @@ import { SizeDirective } from './directives/size.directive';
 
 ////////// Pipes
 import { GetErrorMessagePipe } from './pipes/get-error-message.pipe';
+import { InfoComponent } from './components/info/info.component';
+import { InfoCardComponent } from './components/info-card/info-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { GetErrorMessagePipe } from './pipes/get-error-message.pipe';
     SizeDirective,
     LoginDialogComponent,
     GetErrorMessagePipe,
-    CardsComponent
+    CardsComponent,
+    InfoComponent,
+    InfoCardComponent
   ],
   imports: [
     BrowserModule,
