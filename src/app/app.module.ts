@@ -30,6 +30,7 @@ import { SizeDirective } from './directives/size.directive';
 import { GetErrorMessagePipe } from './pipes/get-error-message.pipe';
 import { InfoComponent } from './components/info/info.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
+import { OddPipe } from './pipes/odd.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { InfoCardComponent } from './components/info-card/info-card.component';
     GetErrorMessagePipe,
     CardsComponent,
     InfoComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    OddPipe
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,32 @@
+@use '@angular/material' as mat;
+
+// get color from _theming.scss in material/core/theming
+$amber: mat.get-color-from-palette(mat.$amber-palette, 500);
+$grey: mat.get-color-from-palette(mat.$grey-palette, 200);
+
+
 .info-container {
     background-color: black;
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .small-title {
+            color: $amber;
+        }
+    
+        .big-title {
+            color: $grey;
+        }
+    }
+
 
     .card {
         width: 80%;
     }
+
 }
