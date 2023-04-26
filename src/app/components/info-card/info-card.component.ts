@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CardConfig } from 'src/app/interfaces/card-config';
 
 @Component({
   selector: 'app-info-card',
@@ -8,5 +9,6 @@ import { Component, Input } from '@angular/core';
 export class InfoCardComponent {
 
   @Input() cardClass: string = '';
+  @Input() cardConfig?: CardConfig;
 
 }

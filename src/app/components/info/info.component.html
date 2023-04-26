@@ -7,8 +7,8 @@
             <h1 class="big-title">OUR PROMISE AN VALUES</h1>
         </div>
     </mat-grid-tile>
-    <mat-grid-tile colspan="1" rowspan="2" *ngFor="let card of [1,2,3,4]; index as i">
-        <app-info-card [cardClass]="( 'reverse-card' | odd: i: false)" class="card"></app-info-card>
+    <mat-grid-tile colspan="1" rowspan="2" *ngFor="let card of cards; index as i">
+        <app-info-card [cardConfig]="card" [cardClass]="( 'reverse-card' | odd: i: false)" class="card"></app-info-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="2"></mat-grid-tile>
 </mat-grid-list>

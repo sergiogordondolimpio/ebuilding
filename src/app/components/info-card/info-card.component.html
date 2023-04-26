@@ -1,7 +1,8 @@
-<div [ngClass]="'card-container ' + cardClass">
-    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+<div [ngClass]="'card-container ' + cardClass" *ngIf="cardConfig">
+    <img *ngIf="cardConfig.image !== ''" [src]="cardConfig.image" >
+    <mat-icon *ngIf="cardConfig.icon !== ''" class="icon">{{cardConfig.icon}}</mat-icon>
     <div class="description">
-        <h2 class="text">Shiba Inu</h2>
-        <p>Large</p>
+        <h2 class="text">{{cardConfig.title}}</h2>
+        <p>{{cardConfig.description}}</p>
     </div>
 </div>

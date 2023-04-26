@@ -20,3 +20,30 @@ export const CARDS_CONFIG: CardConfig[] =  [
         icon: 'grain'
     }
 ]
+
+export const CARDS_INFO_CONFIG: CardConfig[] =  [
+    {
+        image: '',
+        icon: 'accessibility_new',
+        title: 'Safe',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida libero sit amet libero facilisis, sed dapibus est egestas. Vivamus in feugiat sapien. Fusce non enim a ex sollicitudin dignissim.'
+      },
+      {
+        image: '',
+        icon: 'account_balance',
+        title: 'Economic',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida libero sit amet libero facilisis, sed dapibus est egestas. Vivamus in feugiat sapien. Fusce non enim a ex sollicitudin dignissim.'
+      },
+      {
+        image: '',
+        icon: 'all_out',
+        title: 'Resource',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida libero sit amet libero facilisis, sed dapibus est egestas. Vivamus in feugiat sapien. Fusce non enim a ex sollicitudin dignissim.'
+      },
+      {
+        image: '',
+        icon: 'autorenew',
+        title: 'Time',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida libero sit amet libero facilisis, sed dapibus est egestas. Vivamus in feugiat sapien. Fusce non enim a ex sollicitudin dignissim.'
+      }
+]
