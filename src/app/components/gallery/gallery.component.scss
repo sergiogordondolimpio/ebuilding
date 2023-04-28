@@ -1,0 +1,41 @@
+.gallery-container {
+
+    margin: 20px 0;
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 8rem;
+
+
+        .small-title {
+            color:#ffc107;
+        }
+
+        .big-title {
+            margin-bottom: 20px;
+        }
+    
+    }
+
+    .image-container {
+        padding: 0 30px;
+    }
+
+    .footer {
+        height: 6rem;
+        background-color: #ffc107;
+        margin: 0 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+            color: white;
+        }
+    }
+}

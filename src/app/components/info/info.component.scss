@@ -7,6 +7,7 @@ $grey: mat.get-color-from-palette(mat.$grey-palette, 200);
 
 .info-container {
     background-color: black;
+    padding-bottom: 60px;
 
     .title-container {
         display: flex;

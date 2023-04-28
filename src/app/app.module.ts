@@ -31,6 +31,7 @@ import { GetErrorMessagePipe } from './pipes/get-error-message.pipe';
 import { InfoComponent } from './components/info/info.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { OddPipe } from './pipes/odd.pipe';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { OddPipe } from './pipes/odd.pipe';
     CardsComponent,
     InfoComponent,
     InfoCardComponent,
-    OddPipe
+    OddPipe,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

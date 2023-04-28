@@ -1,0 +1,16 @@
+<div class="gallery-container">
+    <div class="title-container">
+        <h2 class="small-title">GALLERY</h2>
+        <h1 class="big-title">WHAT WE CAN OFFER YOU</h1>
+    </div>
+    <div class="image-container">
+        <mat-grid-list cols="4" rowHeight="80px" class="">
+            <mat-grid-tile colspan="1" rowspan="2" *ngFor="let image of gallery; index as i">
+                <img [src]="image.url">
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    <div class="footer">
+        <p>All you need in your construction</p>
+    </div>
+</div>

@@ -1,17 +1,18 @@
 
 
-<mat-grid-list cols="2" rowHeight="100px" class="info-container">
-    <mat-grid-tile colspan="2" rowspan="2">
-        <div class="title-container">
-            <h2 class="small-title">WHY CHOOSE US</h2>
-            <h1 class="big-title">OUR PROMISE AN VALUES</h1>
-        </div>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="1" rowspan="2" *ngFor="let card of cards; index as i">
-        <app-info-card [cardConfig]="card" [cardClass]="( 'reverse-card' | odd: i: false)" class="card"></app-info-card>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2">
-        <button mat-raised-button  color="primary">Read more!</button>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2"></mat-grid-tile>
-</mat-grid-list>
+<div class="info-container">
+    <mat-grid-list cols="2" rowHeight="80px" class="">
+        <mat-grid-tile colspan="2" rowspan="2">
+            <div class="title-container">
+                <h2 class="small-title">WHY CHOOSE US</h2>
+                <h1 class="big-title">OUR PROMISE AN VALUES</h1>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="2" *ngFor="let card of cards; index as i">
+            <app-info-card [cardConfig]="card" [cardClass]="( 'reverse-card' | odd: i: false)" class="card"></app-info-card>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+            <button mat-raised-button  color="primary">Read more!</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
